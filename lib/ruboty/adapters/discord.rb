@@ -4,8 +4,8 @@ require 'discordrb'
 require 'ruboty/adapters/base'
 
 module Ruboty
-  module Adapters
-    class Discord < Base
+  module Adapters # :nodoc:
+    class Discord < Base # :nodoc:
       env :DISCORD_TOKEN, 'Account\'s token. get one on https://discordapp.com/developers/applications/me'
 
       def run
@@ -16,7 +16,8 @@ module Ruboty
 
       def say(message)
         channel_id = message[:to]
-        content    = message[:code] ? "```\n#{message[:body]}\n```" : message[:body]
+        body       = message[:body]
+        content    = message[:code] ? "```\n#{body}\n```" : body
 
         bot.send_message(channel_id, content)
       end
@@ -44,19 +45,21 @@ module Ruboty
       end
 
       def on_message(message)
-        body = message.content.gsub(/<@([^>]+?)>/) do |matched|
-          user_id = $1.to_i
-          user = message.mentions.find { |user| user.id == user_id }
-          user.nil? ? matched : "@#{user.username}"
-        end
-
         robot.receive(
-          body: body,
+          body: parse_content(message),
           from: message.channel.id,
           from_name: message.author.name,
           to: message.channel.id,
           time: message.timestamp
         )
+      end
+    end
+
+    def parse_content(message)
+      message.content.gsub(/<@([^>]+?)>/) do |matched|
+        user_id = Regexp.last_match[1].to_i
+        user = message.mentions.find { |mention| mention.id == user_id }
+        user.nil? ? matched : "@#{user.username}"
       end
     end
   end
