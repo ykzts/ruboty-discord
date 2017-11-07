@@ -4,7 +4,7 @@ This issue is a **Feature request** or **Bug Report**.
 
 <!-- only bug report -->
 <!--
-### Chack list
+### Check list
 
 - [ ] Do you reproduce the bug on the [master](https://github.com/ykzts/ruboty-discord/tree/master) branch?
 - [ ] Did you check whether the bug is duplicated? ([Issues](https://github.com/ykzts/ruboty-discord/issues))
