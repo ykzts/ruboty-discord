@@ -53,13 +53,13 @@ module Ruboty
           time: message.timestamp
         )
       end
-    end
 
-    def parse_content(message)
-      message.content.gsub(/<@([^>]+?)>/) do |matched|
-        user_id = Regexp.last_match[1].to_i
-        user = message.mentions.find { |mention| mention.id == user_id }
-        user.nil? ? matched : "@#{user.username}"
+      def parse_content(message)
+        message.content.gsub(/<@([^>]+?)>/) do |matched|
+          user_id = Regexp.last_match[1].to_i
+          user = message.mentions.find { |mention| mention.id == user_id }
+          user.nil? ? matched : "@#{user.username}"
+        end
       end
     end
   end
