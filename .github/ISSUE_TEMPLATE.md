@@ -2,6 +2,10 @@
 
 This issue is a **Feature request** or **Bug Report**.
 
+### Summary
+
+<!-- Please edit -->
+
 <!-- only bug report -->
 <!--
 ### Check list
@@ -14,16 +18,13 @@ This issue is a **Feature request** or **Bug Report**.
 1. ...
 2. ...
 3. ...
--->
-
-### Summary
-
-<!-- Please edit -->
 
 ### Your Environment
 
-| sofware | version        |
-|---------|----------------|
-| Ruby    | <!-- 2.4.2 --> |
-| Ruboty  | <!-- 1.3.0 --> |
-| OS      |                |
+| sofware         | version                    |
+|-----------------|----------------------------|
+| Ruby            | 2.4.2?                     |
+| Ruboty          | 1.3.0?                     |
+| Ruboty::Discord | 1.0.0?                     |
+| OS              | GNU/Linux? macOS? Windows? |
+-->
