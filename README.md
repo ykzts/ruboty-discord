@@ -1,4 +1,4 @@
-# Ruboty::Discord
+# Ruboty::Discord [![build status](https://travis-ci.org/ykzts/ruboty-discord.svg?branch=master)](https://travis-ci.org/ykzts/ruboty-discord)
 
 Discord adapter for [Ruboty](https://github.com/r7kamura/ruboty).
 
