@@ -15,8 +15,8 @@ gem 'ruboty-discord'
 2. Get Client ID & bot user token
 3. Open `https://discordapp.com/oauth2/authorize?scope=bot&client_id=xxxxxxxxx` (Replace `xxxxxxxxx` with client ID)
 
-## ENV
+## Environment variables
 
-```plain
-DISCORD_TOKEN - Account's token
-```
+| Name            | Description       |
+|-----------------|-------------------|
+| `DISCORD_TOKEN` | Bot user's token. |
