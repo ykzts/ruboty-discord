@@ -20,3 +20,7 @@ gem 'ruboty-discord'
 | Name            | Description       |
 |-----------------|-------------------|
 | `DISCORD_TOKEN` | Bot user's token. |
+
+## License
+
+[MIT](LICENSE)
